@@ -1,0 +1,16 @@
+<p>{{entity.examName}}</p>
+
+<ol>
+  <li ng-repeat="question in entity.questions">
+    <h4>{{question.title}}</h4>
+    <p>{{question.description}}</p>
+    <ul>
+      <li ng-repeat="option in question.options">
+        <input type="checkbox" ng-model="option.isChecked">
+        {{option.description}}
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<button class="btn btn-success" ng-click="submit()">Submit</button>
