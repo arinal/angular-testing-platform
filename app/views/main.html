@@ -1,12 +1,9 @@
-<div class="jumbotron">
-  <h2>{{exam.name}}</h2>
-  <p class="lead">
-    <img src="http://techtrial.crossover.com/assets/images/logo_white_transparent.gif" class="img-responsive" style="margin: 0 auto; height: 50px;">
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-click="start()">Take the test!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
-<div class="row marketing">
-  <h4>Exam Description</h4>
-  <p>{{exam.description}}</p>
+<div ng-repeat="exam in exams">
+  <div class="jumbotron">
+    <div class="row marketing">
+      <h2>{{exam.name}}</h2>
+      <p>{{exam.description}}</p>
+    </div>
+    <a class="btn btn-lg btn-success" ng-click="takeExam(exam)">Take the test!<span class="glyphicon glyphicon-ok"></span></a>
+  </div>
 </div>
